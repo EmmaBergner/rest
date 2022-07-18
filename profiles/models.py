@@ -15,13 +15,15 @@ class Profile(models.Model):
     image = models.ImageField(
         upload_to='image/', default='../default_profile_ko4ixg.jpg'
     )
+    
 
     class Meta:
         ordering = ['-created_at']
 
     def __str__(self):
         return f"{self.owner}'s profile"
-
+        
+ 
 def create_profile(sender, instance, created, **kwarg):
     if created:
         Profile.objects.create(owner=instance)
