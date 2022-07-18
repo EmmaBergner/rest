@@ -18,6 +18,4 @@ class Like(models.Model):
         unique_together = ['owner', 'post']
 
     def __str__(self):
-        return self.content
-
-lucka 5  7522
+        return f'{self.owner} {self.post}'
