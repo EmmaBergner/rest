@@ -69,7 +69,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['*']
 
-CORS_ALLOWED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = [r'https://*']
 
 # if 'CLIENT_ORIGIN' in os.environ:
 #     CORS_ALLOWED_ORIGINS = [
