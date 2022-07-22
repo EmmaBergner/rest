@@ -62,19 +62,23 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [
-   os.environ.get('ALLOWED_HOST'),
-   'localhost',
-]
+# ALLOWED_HOSTS = [
+#    os.environ.get('ALLOWED_HOST'),
+#    'localhost',
+# ]
 
-if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN')
-    ]
-else: 
-    CORS_ALLOWED_ORIGINS_REGEXES = [
-        r"*",
-    ]
+ALLOWED_HOSTS = ['*']
+
+CORS_ALLOWED_ORIGINS = ['*']
+
+# if 'CLIENT_ORIGIN' in os.environ:
+#     CORS_ALLOWED_ORIGINS = [
+#         os.environ.get('CLIENT_ORIGIN') #emoments-api.herokuapp.com
+#     ]
+# else: 
+#     CORS_ALLOWED_ORIGINS_REGEXES = [
+#         r"*",
+#     ]
 
 CORS_ALLOW_CREDENTIALS = True 
 
