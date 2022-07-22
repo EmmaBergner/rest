@@ -1,6 +1,5 @@
 from distutils.command.upload import upload
 from email.policy import default
-from turtle import update
 from django.db import models
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
